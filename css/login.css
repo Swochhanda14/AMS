@@ -1,0 +1,132 @@
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container .form h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px 0 10px;
+}
+
+.form-container .form h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: 1.5rem;
+    color: var(--neutral-60);
+}
+
+.form .form-content input[type="text"], .form .form-content input[type="password"], input[type="email"]{
+    width: 100%;
+    border: none;
+    padding: 1.4rem;
+    color: var(--primary-20);
+    font-size: 1.8rem;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    padding-inline: 45px;
+  }
+
+  .form .flex{
+    margin-block-end: -20px; 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .form .flex .radioinput{
+    display: flex;
+    gap: 5px;
+    padding: 1.4rem;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  }
+
+  .form .flex .radioinput label{
+    font-size: 1.8rem;
+    color: var(--primary-20);
+    cursor: pointer;
+  }
+
+  .form .flex .radioinput:where(:hover, :focus-visible){
+    border: 2px solid var(--primary-70);;
+  }
+
+
+
+  .form .flexs{
+    margin-block-end: -20px; 
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .form .flexs .forgotpsd {
+    margin-block-start: 0px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    gap: 5px;
+  }
+
+  .form .flexs .forgotpsd label, a{
+    font-size: 1.4rem;
+    color: var(--primary-20);
+  }
+
+  .form a{
+    font-size: 1.4rem;
+    color: var(--neutral-60);
+  }
+
+  .form a:where(:hover, :focus-visible){
+    color: var(--primary-70);
+  }
+
+  .form .form-content{
+    margin: 1.8rem 0rem;
+    display: flex;
+    position: relative;
+  }
+
+  .form .signupdes{
+    font-size: 1.4rem;
+    margin-block-start: 10px;
+  }
+
+    .form .form-content .loginicon{
+    position: absolute;
+    top: 30%;
+    left: 10px;
+  }
+
+  .form .psdforgot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.form .form-content input:where(:active, :focus-visible){
+    border-bottom: 2px solid var(--primary-70);
+  }
+  
+ .form .form-content input:where(:active, :focus) ~ .loginicon{
+    color: var(--primary-70);
+  }
