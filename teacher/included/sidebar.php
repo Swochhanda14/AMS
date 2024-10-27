@@ -106,7 +106,7 @@ if (!isset($_SESSION['username'])) {
                   </li>
 
                   <li>
-                    <a href="#">
+                    <a href="downloadreport.php">
                       <span class="material-symbols-rounded">receipt_long</span>
                       <span class="text">Today report (xls)</span>
                     </a>

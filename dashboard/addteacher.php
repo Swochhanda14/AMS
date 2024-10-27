@@ -87,8 +87,8 @@ if (!isset($_SESSION['username'])) {
 
                             <div class="input-field">
                                 <label for="password">Password</label>
-                                <input type="password" class="form-control" id="password" name="password"
-                                    placeholder="Enter Password">
+                                <input type="text" class="form-control" id="password" name="password"
+                                    placeholder="Enter Password" value="1234" readonly>
                             </div>
                         </div>
 

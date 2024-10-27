@@ -147,6 +147,7 @@ $result = mysqli_fetch_assoc($data);
                                 if ($totalCount > 0) {
                                     $counter = 1;
                                     foreach ($attendanceRecords as $attendance) {
+                                        $bgColor = ($attendance['attendence'] === 'present') ? 'style="background-color: green; color: white;"' : 'style="background-color: red; color: white;"';
                                         echo "<tr>
                                                 <td>{$counter}</td>
                                                 <td>{$attendance['fname']}</td>
@@ -154,7 +155,7 @@ $result = mysqli_fetch_assoc($data);
                                                 <td>{$attendance['admissionid']}</td>
                                                 <td>{$attendance['class']}</td>
                                                 <td>{$attendance['semester']}</td>
-                                                <td>{$attendance['attendence']}</td>
+                                                <td $bgColor>{$attendance['attendence']}</td>
                                                 <td>{$attendance['date']}</td>
                                               </tr>";
                                         $counter++;
