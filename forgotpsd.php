@@ -38,15 +38,15 @@ session_start();
 
                 <div class="form">
 
-                    <form action="" method="post">
+                    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 
                         <h2 class="title-medium">Password reset Pannel</h2>
 
                         <div class="form-contents">
                             <div class="form-content">
-                                <input type="email" name="email" required maxlength="100" placeholder="Email"
-                                    id="email">
-                                <span class="material-symbols-rounded loginicon">email</span>
+                                <input type="text" name="username" required maxlength="100" placeholder="Username"
+                                    id="username">
+                                <span class="material-symbols-rounded loginicon">person</span>
                             </div>
 
                             <div class="form-content">
@@ -56,7 +56,7 @@ session_start();
                             </div>
 
                             <div class="form-content">
-                                <input type="password" name="confirm_password" required maxlength="20"
+                                <input type="password" name="cpassword" required maxlength="20"
                                     placeholder="Confirm Password" id="confirm_password">
                                 <span class="material-symbols-rounded loginicon">lock</span>
                             </div>
@@ -69,13 +69,35 @@ session_start();
                                     << Back to Login>>
                                 </a>
                             </div>
-
-
-
                         </div>
-
                     </form>
+                <?php
+                if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login'])){
+                    $username = $_POST['username'];
+                    $password = isset($_POST['password']) ? $_POST['password'] : null;
+                    $confirm_password = isset($_POST['cpassword']) ? $_POST['cpassword'] : null;
 
+                    // Validate password and confirm password
+                    if($password != $confirm_password){
+                        echo "<script>alert('Password do not match')</script>";
+                    }
+
+                    // Check if username exists
+                    $sql = "SELECT * FROM teacher WHERE username = '$username'";
+                    $result = mysqli_query($conn, $sql);
+                    if(mysqli_num_rows($result) == 0){
+                        echo "<script>alert('Username does not exist')</script>";
+                    }
+
+                    // Update password
+                    $sql = "UPDATE teacher SET password = '$password' WHERE username = '$username'";
+                    $result = mysqli_query($conn, $sql);
+                    if($result){
+                        echo "<script>alert('Password reset successfully')</script>";
+                        echo "<meta http-equiv='refresh' content='0; url=index.php'>";
+                    }
+                }      
+                ?>
                 </div>
 
             </div>
