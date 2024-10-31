@@ -432,27 +432,26 @@ body {
 
 .form-container form .input-field input, select, textarea{
   width: 100%;
-  width: 100%;
   border: none;
   padding: 1rem;
   margin: 1rem 0;
   color: var(--primary-20);
   font-size: 1rem;
-  border-radius: var(--radius-medium);
+  border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   outline: none;
 }
 
 .form-container form .input-field input:focus-visible {
-  border-bottom: 2px solid var(--primary-70);
+  border: 2px solid var(--primary-70);
 }
 
 .form-container form .input-field .select:focus {
-  border-bottom: 2px solid var(--primary-70);
+  border: 2px solid var(--primary-70);
 }
 
 .form-container form .input-field textarea:focus {
-  border-bottom: 2px solid var(--primary-70);
+  border: 2px solid var(--primary-70);
 }
 
 .form-container form .submit-btn {
@@ -555,6 +554,14 @@ table.user-table {
     width: 100%;
     border-collapse: collapse;
 
+}
+.user-table tr th{
+  background-color: var(--primary-70);
+  color: white;
+  text-align: left;
+  padding: 12px;
+  text-decoration: none;
+  border: 1px solid #ddd;
 }
 
 
@@ -720,23 +727,22 @@ table.user-table {
 
 .profile-form form .input-field input, .select{
   width: 100%;
-  width: 100%;
   border: none;
   padding: 1rem;
   margin: 1rem 0;
   color: var(--primary-20);
   font-size: 1rem;
-  border-radius: var(--radius-medium);
-  box-shadow: var(--shadow-1);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   outline: none;
 }
 
 .profile-form form .input-field input:focus-visible{
-  border-bottom: 2px solid var(--primary-70)
+  border: 2px solid var(--primary-70)
 }
 
 .profile-form form .input-field select:focus{
-  border-bottom: 2px solid var(--primary-70)
+  border: 2px solid var(--primary-70)
 }
 
 .radio-inputs {
